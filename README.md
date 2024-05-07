@@ -14,4 +14,8 @@ It will
  - create a `plist` file for `launchd`,
  - link it into `/Library/LaunchDaemons`
 
+# Related information
 
+
+[launchd information](http://developer.apple.com/mac/library/documentation/MacOSX/Conceptual/BPSystemStartup/Articles/LaunchOnDemandDaemons.html)
+[keyboard code](https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
