@@ -8,14 +8,21 @@ This startup script changes keyboard button `§±` to `international backslash`.
 
 # Install
 
-Run the script `install.sh`.
+Run the script `install.sh` as `root`.
 
-It will 
- - create a `plist` file for `launchd`,
- - link it into `/Library/LaunchDaemons`
+The install script will copy the keyboard key switch `local.keyboarSetup.sh`
+into `/Library/Scripts/Keyboard Setup Scripts/`, also creating the directory
+if it does not yet exists.
+
+It will also install the `local.keyboardSetup.plist` into 
+`/Library/LaunchDaemons`
+
+All files will have `root:wheel` as owners.
+
+If any of the files/directories exist, the process will fail, and you will 
+need to manually remove them.
 
 # Related information
-
 
 [launchd information](http://developer.apple.com/mac/library/documentation/MacOSX/Conceptual/BPSystemStartup/Articles/LaunchOnDemandDaemons.html)
 [keyboard code](https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
